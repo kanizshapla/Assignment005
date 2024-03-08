@@ -1,5 +1,6 @@
 import { Avatar, Grid, Typography } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Profile = ({ imagePath, altText, paragraphText }) => {
   // Function to split the paragraph into lines with a maximum number of words

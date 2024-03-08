@@ -1,40 +1,33 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/header.css";
 
 const NavBar = () => {
   return (
     <header className="nav">
       <ul className="header">
-        <a href="#heading" className="nav-item">
+        <Link to="/" className="nav-item">
           Home
-        </a>
+        </Link>
         <li>
-          <a href="#" className="nav-item">
+          <Link to="/profile" className="nav-item">
             About
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#feature" className="nav-item">
+          <Link to="/experience" className="nav-item">
             Experience
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#projects" className="nav-item">
+          <Link to="/project-data" className="nav-item">
             Work
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#contact-me" className="nav-item">
+          <Link to="/contact" className="nav-item">
             Contact
-          </a>
-        </li>
-        <li>
-          <a
-            href="./assets/pdf/KanizFatema.pdf"
-            className="your-custom-styles-here"
-          >
-            Resume
-          </a>
+          </Link>
         </li>
       </ul>
     </header>

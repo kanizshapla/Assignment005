@@ -12,12 +12,12 @@ import "../styles/contact.css";
 
 const contactData = [
   {
-    name: "Your Name",
-    email: "your.email@example.com",
+    name: "Kaniz Fatema",
+    email: "kanizshapla@gmail.com",
     phone: "123-456-7890",
-    address: "Your Address",
-    linkedin: "https://www.linkedin.com/in/your-linkedin",
-    github: "https://github.com/your-github",
+    address: "Dhaka 1212",
+    linkedin: "https://www.linkedin.com/in/kanizshapla46",
+    github: "https://github.com/kanizshapla",
   },
 ];
 

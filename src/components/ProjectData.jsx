@@ -1,6 +1,7 @@
 // ProjectData.jsx
 import { Grid } from "@mui/material";
 import React from "react";
+import Heading from "./Heading";
 import Projects from "./Projects";
 
 const projectData = [
@@ -30,13 +31,16 @@ const projectData = [
 
 const ProjectData = () => {
   return (
-    <Grid container spacing={2}>
-      {projectData.map((project, index) => (
-        <Grid item key={index} xs={12} sm={4}>
-          <Projects {...project} />
-        </Grid>
-      ))}
-    </Grid>
+    <>
+      <Heading title="projects" />
+      <Grid container spacing={2}>
+        {projectData.map((project, index) => (
+          <Grid item key={index} xs={12} sm={4}>
+            <Projects {...project} />
+          </Grid>
+        ))}
+      </Grid>
+    </>
   );
 };
 

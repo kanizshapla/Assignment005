@@ -1,12 +1,13 @@
-/* projects.css */
-
 .card-container {
-  margin: 10px;
+  margin: 30px;
   width: 345px;
+  margin-bottom: 6%;
+  display: inline-block;
 }
 
 .card-content {
   padding: 16px;
+  margin-bottom: 60px;
 }
 
 .card-header {

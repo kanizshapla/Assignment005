@@ -12,12 +12,12 @@ const Footer = () => {
         textAlign: "center",
       }}
     >
-      <Container maxWidth="sm">
+      <Container maxWidth="lg">
         <Typography variant="body2" color="text.secondary">
-          © {new Date().getFullYear()} Your Website Name
+          © {new Date().getFullYear()} Portfolio
         </Typography>
         <Typography variant="body2" color="text.secondary" mt={2}>
-          Created with love using React and Material-UI
+          Created using React and Material-UI
         </Typography>
         <Typography variant="body2" color="text.secondary" mt={2}>
           <Link href="#" color="inherit">

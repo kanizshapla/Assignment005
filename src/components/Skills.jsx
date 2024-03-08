@@ -1,17 +1,12 @@
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 import "../styles/skills.css";
 
 const bull = (
-  <Box
-    component="span"
-    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
+  <Box component="span" sx={{ display: "inline-block", mx: "2px" }}>
     •
   </Box>
 );
@@ -29,15 +24,7 @@ export default function Skills({ title, subtitle, description }) {
         <Typography className="card-description" color="text.secondary">
           {description}
         </Typography>
-        <Typography variant="body2">
-          Customize this content as needed.
-          <br />
-          {'"Additional information goes here"'}
-        </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </React.Fragment>
   );
 

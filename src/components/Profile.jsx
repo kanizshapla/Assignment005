@@ -1,6 +1,6 @@
 import { Avatar, Grid, Typography } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
+import Heading from "./Heading";
 
 const Profile = ({ imagePath, altText, paragraphText }) => {
   // Function to split the paragraph into lines with a maximum number of words
@@ -29,20 +29,23 @@ const Profile = ({ imagePath, altText, paragraphText }) => {
   const lines = splitParagraph(paragraphText, 15);
 
   return (
-    <Grid container direction="column" alignItems="center">
-      <Grid item>
-        <Avatar
-          src={imagePath}
-          alt={altText}
-          sx={{ width: 200, height: 200, marginBottom: 2 }}
-        />
+    <>
+      <Grid container direction="column" alignItems="center">
+        <Grid item>
+          <Avatar
+            src={imagePath}
+            alt={altText}
+            sx={{ width: 200, height: 200, marginBottom: 2 }}
+          />
+        </Grid>
+        <Heading title="about" />
+        <Grid item>
+          {lines.map((line, index) => (
+            <Typography key={index}>{line}</Typography>
+          ))}
+        </Grid>
       </Grid>
-      <Grid item>
-        {lines.map((line, index) => (
-          <Typography key={index}>{line}</Typography>
-        ))}
-      </Grid>
-    </Grid>
+    </>
   );
 };
 

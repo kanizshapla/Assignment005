@@ -1,0 +1,38 @@
+.contact-container {
+  text-align: center;
+  margin-top: 70px;
+  width: 100%;
+}
+
+.contact-header {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-paper {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+  margin-top: 10px;
+}
+
+.contact-info svg {
+  margin-right: 10px;
+  font-size: 20px;
+  color: rgb(27, 27, 163);
+}
+
+.contact-info strong {
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .contact-paper {
+    padding: 15px;
+  }
+}

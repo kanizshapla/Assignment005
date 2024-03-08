@@ -1,4 +1,3 @@
-// Contact.jsx
 import {
   ContactMail,
   Email,
@@ -9,6 +8,7 @@ import {
 } from "@mui/icons-material";
 import { Grid, Paper, Typography } from "@mui/material";
 import React from "react";
+import "../styles/contact.css";
 
 const contactData = [
   {
@@ -25,13 +25,13 @@ const Contact = () => {
   const contact = contactData[0]; // Assuming only one contact in the array
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <Typography variant="h4" gutterBottom>
+    <div className="contact-container">
+      <Typography variant="h4" className="contact-header">
         Contact Information
       </Typography>
       <Grid container spacing={2} justifyContent="center">
         <Grid item xs={12} sm={6}>
-          <Paper elevation={3} style={{ padding: "20px" }}>
+          <Paper elevation={3} className="contact-paper">
             <ContactInfo
               icon={<ContactMail />}
               label="Name"
@@ -67,7 +67,7 @@ const Contact = () => {
 
 const ContactInfo = ({ icon, label, value }) => {
   return (
-    <Grid container spacing={1} alignItems="center">
+    <Grid container spacing={1} alignItems="center" className="contact-info">
       <Grid item>{icon}</Grid>
       <Grid item>
         <Typography variant="subtitle1">

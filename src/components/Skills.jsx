@@ -5,6 +5,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+import "../styles/skills.css";
 
 const bull = (
   <Box
@@ -18,14 +19,14 @@ const bull = (
 export default function Skills({ title, subtitle, description }) {
   const card = (
     <React.Fragment>
-      <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+      <CardContent className="card-content">
+        <Typography className="card-title" color="text.secondary" gutterBottom>
           {title}
         </Typography>
-        <Typography variant="h5" component="div">
+        <Typography variant="h5" component="div" className="card-subtitle">
           {subtitle}
         </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+        <Typography className="card-description" color="text.secondary">
           {description}
         </Typography>
         <Typography variant="body2">
@@ -41,7 +42,7 @@ export default function Skills({ title, subtitle, description }) {
   );
 
   return (
-    <Box sx={{ minWidth: 275 }}>
+    <Box className="card-container" sx={{ minWidth: 275 }}>
       <Card variant="outlined">{card}</Card>
     </Box>
   );

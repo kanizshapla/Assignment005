@@ -1,0 +1,33 @@
+.nav {
+  background-color: white;
+  padding: 10px;
+}
+
+.header {
+  list-style: none;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+}
+
+.header li {
+  margin: 0;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 1280px) {
+  .header {
+    gap: 15px; /* Adjust the gap for medium screens */
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .header {
+    flex-direction: column; /* Stack items vertically for small screens */
+    align-items: center;
+  }
+}

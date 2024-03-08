@@ -1,0 +1,81 @@
+/* projects.css */
+
+.card-container {
+  margin: 10px;
+  width: 345px;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-header {
+  background-color: #2196f3;
+  color: white;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-description {
+  color: #555;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expand-icon {
+  color: #ff9800;
+}
+
+@media (max-width: 620px) {
+  .card-container {
+    width: 80%;
+    margin: 0 auto;
+    height: 90%;
+    padding: 10px;
+  }
+  .card-description {
+    height: 90%;
+  }
+  .card-image {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 780px) {
+  .card-container {
+    width: 80%;
+    margin: 0 auto;
+    height: 90%;
+    padding: 10px;
+  }
+  .card-description {
+    height: 90%;
+  }
+  .card-image {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 1080px) {
+  .card-container {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    padding: 10px;
+  }
+  .card-description {
+    height: 90%;
+  }
+  .card-image {
+    width: 80%;
+    height: auto;
+  }
+}

@@ -1,7 +1,5 @@
+import { Favorite, MoreVert, Share } from "@mui/icons-material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import ShareIcon from "@mui/icons-material/Share";
 import {
   Avatar,
   Card,
@@ -15,10 +13,12 @@ import {
 } from "@mui/material";
 import { red } from "@mui/material/colors";
 import React, { useState } from "react";
+import "../styles/projects.css";
 
 const ExpandMore = ({ expand, onClick, ariaExpanded }) => {
   return (
     <IconButton
+      className="expand-icon"
       onClick={onClick}
       aria-expanded={ariaExpanded}
       aria-label="show more"
@@ -36,8 +36,9 @@ const Projects = ({ title, subheader, imageUrl, description, method }) => {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card className="card-container" sx={{ maxWidth: 345 }}>
       <CardHeader
+        className="card-header"
         avatar={
           <Avatar sx={{ bgcolor: red[500] }}>
             {title ? title.charAt(0) : ""}
@@ -45,24 +46,34 @@ const Projects = ({ title, subheader, imageUrl, description, method }) => {
         }
         action={
           <IconButton aria-label="settings">
-            <MoreVertIcon />
+            <MoreVert />
           </IconButton>
         }
         title={title}
         subheader={subheader}
       />
-      <CardMedia component="img" height="194" image={imageUrl} alt={title} />
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
+      <CardMedia
+        className="card-image"
+        component="img"
+        height="194"
+        image={imageUrl}
+        alt={title}
+      />
+      <CardContent className="card-content">
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          className="card-description"
+        >
           {description}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
+      <CardActions disableSpacing className="card-actions">
         <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+          <Favorite />
         </IconButton>
         <IconButton aria-label="share">
-          <ShareIcon />
+          <Share />
         </IconButton>
         <ExpandMore
           expand={expanded}

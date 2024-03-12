@@ -11,16 +11,17 @@ const Heading = ({ title }) => {
   };
 
   const styles = {
-    fontFamily: "Roboto, sans-serif", // Use a suitable font-family
-    fontSize: "2rem", // Adjust the font size
-    fontWeight: 700, // Adjust the font weight
-    marginBottom: "20px", // Add some space below the heading
+    fontFamily: "Roboto, sans-serif",
+    fontSize: "2rem",
+    fontWeight: 700,
+    marginBottom: "20px",
     marginTop: "60px",
-    color: "#000", // Font color for responsive
-    padding: "10px", // Padding for better visibility
-    width: "250px", // Width for responsive
+    color: "#000",
+    padding: "10px",
+    width: "250px",
     height: "50px",
     margin: "0 auto",
+    backgroundColor: "#fff",
   };
 
   return (

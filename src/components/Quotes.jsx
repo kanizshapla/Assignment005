@@ -27,7 +27,7 @@ const Quotes = () => {
   return (
     <div>
       <Heading title="quotes" />
-      <p>{quote}</p>
+      <p className="quote-text">{quote}</p>
     </div>
   );
 };

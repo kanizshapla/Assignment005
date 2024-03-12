@@ -41,7 +41,9 @@ const Profile = ({ imagePath, altText, paragraphText }) => {
         <Heading title="about" />
         <Grid item>
           {lines.map((line, index) => (
-            <Typography key={index}>{line}</Typography>
+            <Typography key={index} style={{ color: "#333" }}>
+              {line}
+            </Typography>
           ))}
         </Grid>
       </Grid>

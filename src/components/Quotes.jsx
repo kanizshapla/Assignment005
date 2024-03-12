@@ -4,13 +4,14 @@ import "../styles/quotes.css";
 import Heading from "./Heading";
 
 const Quotes = () => {
-  const [quote, setQuote] = useState("");
+  const [quote, setQuote] = useState({ content: "", author: "" });
 
   useEffect(() => {
     const fetchQuote = async () => {
       try {
         const response = await axios.get("https://api.quotable.io/random");
-        setQuote(response.data.content);
+        const { content, author } = response.data;
+        setQuote({ content, author });
       } catch (error) {
         console.error("Error fetching quote:", error);
       }
@@ -27,7 +28,8 @@ const Quotes = () => {
   return (
     <div>
       <Heading title="quotes" />
-      <p className="quote-text">{quote}</p>
+      <p className="quote-text">{quote.content}</p>
+      <p className="quote-author">{quote.author}</p>
     </div>
   );
 };

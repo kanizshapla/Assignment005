@@ -6,15 +6,21 @@ const Heading = ({ title }) => {
     projects: "Projects",
     experience: "Experience",
     about: "Kaniz Fatema",
+    contact: "Contact",
+    quotes: "Wisdom Drops",
   };
 
   const styles = {
-    color: "#333", // You can change the color to your preference
     fontFamily: "Roboto, sans-serif", // Use a suitable font-family
     fontSize: "2rem", // Adjust the font size
     fontWeight: 700, // Adjust the font weight
     marginBottom: "20px", // Add some space below the heading
-    marginTop: "30px",
+    marginTop: "60px",
+    color: "#000", // Font color for responsive
+    padding: "10px", // Padding for better visibility
+    width: "250px", // Width for responsive
+    height: "50px",
+    margin: "0 auto",
   };
 
   return (

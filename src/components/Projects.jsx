@@ -1,5 +1,9 @@
-import { Favorite, MoreVert, Share } from "@mui/icons-material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import {
+  ExpandMore as ExpandMoreIcon,
+  GitHub as GitHubIcon,
+  Launch as LaunchIcon,
+  MoreVert,
+} from "@mui/icons-material";
 import {
   Avatar,
   Card,
@@ -9,6 +13,7 @@ import {
   CardMedia,
   Collapse,
   IconButton,
+  Link as MuiLink,
   Typography,
 } from "@mui/material";
 import { red } from "@mui/material/colors";
@@ -28,7 +33,15 @@ const ExpandMore = ({ expand, onClick, ariaExpanded }) => {
   );
 };
 
-const Projects = ({ title, subheader, imageUrl, description, method }) => {
+const Projects = ({
+  title,
+  subheader,
+  imageUrl,
+  description,
+  method,
+  githubLink,
+  liveLink,
+}) => {
   const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
@@ -69,11 +82,27 @@ const Projects = ({ title, subheader, imageUrl, description, method }) => {
         </Typography>
       </CardContent>
       <CardActions disableSpacing className="card-actions">
-        <IconButton aria-label="add to favorites">
-          <Favorite />
+        {/* GitHub Link */}
+        <IconButton>
+          <MuiLink
+            href={githubLink}
+            target="_blank"
+            color="inherit"
+            underline="none"
+          >
+            <GitHubIcon />
+          </MuiLink>
         </IconButton>
-        <IconButton aria-label="share">
-          <Share />
+        {/* Live Link */}
+        <IconButton>
+          <MuiLink
+            href={liveLink}
+            target="_blank"
+            color="inherit"
+            underline="none"
+          >
+            <LaunchIcon />
+          </MuiLink>
         </IconButton>
         <ExpandMore
           expand={expanded}

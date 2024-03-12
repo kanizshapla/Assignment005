@@ -9,6 +9,7 @@ import {
 import { Grid, Paper, Typography } from "@mui/material";
 import React from "react";
 import "../styles/contact.css";
+import Heading from "./Heading";
 
 const contactData = [
   {
@@ -25,43 +26,47 @@ const Contact = () => {
   const contact = contactData[0]; // Assuming only one contact in the array
 
   return (
-    <div className="contact-container">
-      <Typography variant="h4" className="contact-header">
-        Contact Information
-      </Typography>
-      <Grid container spacing={2} justifyContent="center">
-        <Grid item xs={12} sm={6}>
-          <Paper elevation={3} className="contact-paper">
-            <ContactInfo
-              icon={<ContactMail />}
-              label="Name"
-              value={contact.name}
-            />
-            <ContactInfo icon={<Email />} label="Email" value={contact.email} />
-            <ContactInfo
-              icon={<Phone />}
-              label="Phone Number"
-              value={contact.phone}
-            />
-            <ContactInfo
-              icon={<LocationOn />}
-              label="Address"
-              value={contact.address}
-            />
-            <ContactInfo
-              icon={<LinkedIn />}
-              label="LinkedIn"
-              value={contact.linkedin}
-            />
-            <ContactInfo
-              icon={<GitHub />}
-              label="GitHub"
-              value={contact.github}
-            />
-          </Paper>
+    <>
+      <Heading title="contact" />
+      <div className="contact-container">
+        <Grid container spacing={2} justifyContent="center">
+          <Grid item xs={12} sm={6}>
+            <Paper elevation={3} className="contact-paper">
+              <ContactInfo
+                icon={<ContactMail />}
+                label="Name"
+                value={contact.name}
+              />
+              <ContactInfo
+                icon={<Email />}
+                label="Email"
+                value={contact.email}
+              />
+              <ContactInfo
+                icon={<Phone />}
+                label="Phone Number"
+                value={contact.phone}
+              />
+              <ContactInfo
+                icon={<LocationOn />}
+                label="Address"
+                value={contact.address}
+              />
+              <ContactInfo
+                icon={<LinkedIn />}
+                label="LinkedIn"
+                value={contact.linkedin}
+              />
+              <ContactInfo
+                icon={<GitHub />}
+                label="GitHub"
+                value={contact.github}
+              />
+            </Paper>
+          </Grid>
         </Grid>
-      </Grid>
-    </div>
+      </div>
+    </>
   );
 };
 

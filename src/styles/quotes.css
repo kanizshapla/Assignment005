@@ -1,0 +1,45 @@
+/* styles for Quote component */
+
+.quotes-container {
+  background-color: #f8f9fa;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.quote-text {
+  font-size: 24px;
+  font-style: italic;
+  color: #2cc2fd;
+  margin-bottom: 20px;
+}
+
+.quote-author {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2cc2fd;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .quotes-container {
+    padding: 30px 10px;
+  }
+
+  .quote-text {
+    font-size: 20px;
+  }
+
+  .quote-author {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-text {
+    font-size: 18px;
+  }
+
+  .quote-author {
+    font-size: 14px;
+  }
+}

@@ -16,6 +16,7 @@ const Home = () => (
     />
     <Quotes />
     <ProjectData />
+    <br />
     <Experience />
     <Contact />
   </>

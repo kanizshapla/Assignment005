@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div>
         <NavBar />
-        <hr />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/profile" element={<Home />} />

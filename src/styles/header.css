@@ -1,6 +1,8 @@
+/* Header styles */
 .nav {
   background-color: white;
   padding: 10px;
+  position: relative;
 }
 
 .header {
@@ -19,15 +21,43 @@
   color: black;
 }
 
-@media screen and (max-width: 1280px) {
-  .header {
-    gap: 15px; /* Adjust the gap for medium screens */
-  }
+/* Hamburger icon and mobile menu styles */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px; /* Adjust the top position as needed */
+  right: 10px; /* Adjust the right position as needed */
+  font-size: 24px;
+}
+
+.header.menu-open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media screen and (max-width: 780px) {
+  .menu-toggle {
+    display: block;
+  }
+
   .header {
-    flex-direction: column; /* Stack items vertically for small screens */
-    align-items: center;
+    display: none;
+  }
+
+  .nav.menu-open {
+    padding-top: 10px;
+  }
+}
+
+/* Larger screens */
+@media screen and (min-width: 781px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .header {
+    display: flex;
   }
 }
